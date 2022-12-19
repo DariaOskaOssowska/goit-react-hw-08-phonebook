@@ -1,6 +1,5 @@
 import React, { useEffect, lazy } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getIsLoading, getError } from 'redux/contacts/selectors';
+import { useDispatch } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
