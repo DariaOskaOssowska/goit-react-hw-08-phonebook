@@ -1,13 +1,7 @@
 import React, { useEffect, lazy } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { ContactForm } from './ContactForm/ContactForm';
-import { Filter } from './Filter/Filter';
-import { ContactList } from './ContactList/ContactList';
 import { getIsLoading, getError } from 'redux/contacts/selectors';
 import { fetchContacts } from 'redux/contacts/operations';
-import { Loader } from './Loader/Loader';
-
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { PrivateRoute } from './PrivateRoute';
@@ -23,8 +17,6 @@ const ContactsPage = lazy(() => import('../pages/Contacts'));
 
 export const App = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
 
    const { isRefreshing } = useAuth();
 
