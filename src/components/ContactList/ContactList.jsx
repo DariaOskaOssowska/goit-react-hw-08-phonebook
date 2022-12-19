@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { delContact } from 'redux/operations';
-import { getContacts, getFilter } from 'redux/selectors';
+import { delContact } from 'redux/contacts/operations';
+import { getContacts, getFilter } from 'redux/contacts/selectors';
 import css from './ContactList.module.css';
 
 const getVisibleContacts = (contacts, filter) => {
@@ -26,7 +26,7 @@ export const ContactList = () => {
       <ul className={css.contactList}>
         {visibleContacts.map((contact, id) => (
           <li key={id} className={css.contactListItem}>
-            {contact.name}: {contact.phone}
+            {contact.name}: {contact.number}
             <button
               type="button"
               className={css.contactListItemBtn}

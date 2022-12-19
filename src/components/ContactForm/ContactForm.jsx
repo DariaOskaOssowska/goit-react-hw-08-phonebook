@@ -2,8 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import css from './ContactForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'redux/operations';
-import { getContacts } from 'redux/selectors';
+import { addContact } from 'redux/contacts/operations';
+import { getContacts } from 'redux/contacts/selectors';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -24,11 +24,11 @@ export const ContactForm = () => {
   const handleFormSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
-      const contactsLists = [...items];
+    const contactsLists = [...items];
     if (contactsLists.findIndex(contact => name === contact.name) !== -1) {
       alert(`${name} is already in contacts.`);
     } else {
-      dispatch(addContact({ name: name, phone: number }));
+      dispatch(addContact({ name, number }));
     }
 
     form.reset();
