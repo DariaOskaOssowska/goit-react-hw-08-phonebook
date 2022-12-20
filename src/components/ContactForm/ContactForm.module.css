@@ -3,6 +3,7 @@
   flex-direction: column;
 }
 
+.formLabel,
 .formName,
 .formNumber {
   display: flex;
@@ -13,7 +14,7 @@
   align-items: center;
   font-size: large;
   text-align: left;
-  padding: 0.5rem 15rem 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 .formBtn {
