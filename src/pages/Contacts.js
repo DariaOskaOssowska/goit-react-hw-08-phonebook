@@ -17,7 +17,7 @@ export default function Contacts() {
   return (
     <>
       <Helmet>
-        <title>Your contacts</title>
+        <title>Phonebook</title>
       </Helmet>
       <ContactForm />
       <div>{isLoading && 'Request in progress...'}</div>
